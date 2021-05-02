@@ -72,10 +72,10 @@ public class BaseActivity extends AppCompatActivity {
             .addTab(new Tab()
                     .setTitle("Menu")
                     .setIconImage(R.drawable.n_activity)
-                    .addTabListItem(new TabListItem("Trending", R.drawable.ic_trending_up))
+                    .addTabListItem(new TabListItem("Playlist", R.drawable.ic_playlist_play))
                     .addTabListItem(new TabListItem("Favorite", R.drawable.ic_favorites))
                     .addTabListItem(new TabListItem("Search", R.drawable.ic_movie_search))
-                    .addTabListItem(new TabListItem("Playlist", R.drawable.ic_playlist_play))
+                    .addTabListItem(new TabListItem("Playlist", R.drawable.ic_favorites))
                     .addTabListItem(new TabListItem("History", R.drawable.ic_history))
                     )
 
