@@ -1,0 +1,56 @@
+<resources>
+    <string name="application_name">YTChannel</string>
+
+    <string name="action_about">About</string>
+    <string name="action_search">Search</string>
+    
+    <string name="favorite_watched_tab">Recently watched</string>
+    <string name="recently_watched_tab">Recently watched</string>
+    <string name="search_tab">Search YouTube</string>
+    <string name="playlists_tab">Playlists</string>
+    <string name="search_hint">Search YouTube</string>
+    <string name="clear_list">Clear recently played list</string>
+
+    <string name="email">vanste25@gmail.com</string>
+    <string name="date">March 2016.</string>
+    <string name="myName">Stevan Medic</string>
+
+    <string name="number_of_videos">Number of videos:</string>
+    <string name="status">Status:</string>
+    <string name="all_permissions_request">Request permissions</string>
+    <string name="ok">ok</string>
+    <string name="choose_colors">Choose background and text color</string>
+    <string name="cancel">cancel</string>
+    <string name="failed_playback">Playback failed!</string>
+    <string name="list_empty">List is empty!</string>
+    
+    <string name="error_thumbnail_view">There was an error initializing the YouTubeThumbnailView (%1$s)</string>
+    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
+    
+
+    <string name="speak_now">Speak now</string>
+
+    <string name="connecting_text">Connecting&#8230;</string>
+    <string name="connected_text">Connection successful</string>
+    <string name="connection_error_text">Connection error</string>
+     
+    <string name="imagepicker_action_ok">OK</string>
+    <string name="imagepicker_action_done">DONE</string>
+    <string name="imagepicker_title_folder">Albums</string>
+    <string name="imagepicker_title_image">Galleries</string>
+    <string name="imagepicker_text_gif">GIF</string>
+    <string name="imagepicker_photo_count_multiple">%d images</string>
+    <string name="imagepicker_photo_count_single">%d image</string>
+    <string name="imagepicker_error_no_camera">No camera found</string>
+    <string name="imagepicker_error_create_image_file">Failed to create image file</string>
+    <string name="imagepicker_error_images_not_exist">Images not exist</string>
+    <string name="imagepicker_error_unknown">Unknown error</string>
+    <string name="imagepicker_msg_no_images">No images</string>
+    <string name="imagepicker_msg_no_write_external_storage_permission">To continue, please give access to your photos</string>
+    <string name="imagepicker_msg_no_camera_permission">To continue, please give access to take pictures</string>
+    <string name="imagepicker_msg_no_write_external_storage_camera_permission">To continue, please give access to take pictures</string>
+    <string name="imagepicker_msg_limit_images">Limit selection to %d images</string>
+
+
+  <string name="item_logo">Item Logo</string>
+</resources>
