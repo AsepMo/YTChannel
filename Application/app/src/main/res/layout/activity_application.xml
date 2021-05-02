@@ -6,44 +6,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.channel.engine.widget.ConnectionStatusView
-        android:id="@+id/status"
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        app:dismissOnComplete="true" />
-       
-    <com.channel.engine.widget.SearchBox
-        android:id="@+id/searchbox"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" />
-
-    <RelativeLayout   
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#eee">
-
-        <FrameLayout
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:id="@+id/content_frame"/>
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-        <com.channel.engine.widget.TabDrawerLayout
-            android:id="@+id/tabDrawer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            app:tabBarPosition="bottom"
-            app:size_tabBar="48dp"
-            app:size_Total="240dp"
-            app:defaultSelectedTab="1"
-            app:padding="3dp"
-            app:list_padding="16dp"/>
-
-    </RelativeLayout>
+    </android.support.design.widget.AppBarLayout>
 
 </LinearLayout>
 
