@@ -50,7 +50,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.channel.application.YoutubeTasksActivity"
+            android:name="com.channel.application.YouTubeTaskActivity"
             android:label="@string/application_name" 
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

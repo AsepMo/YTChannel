@@ -17,8 +17,8 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.channel.application.settings.LocalPreference;
-import com.channel.application.youtube.YouTubeInfo;
-import com.channel.application.youtube.fragment.YouTubePopulerFragment;
+import com.channel.application.youtube.models.YouTubeChannel;
+import com.channel.application.youtube.fragment.YouTubeChannelFragment;
 import com.channel.engine.app.BaseActivity;
 
 public class ApplicationActivity extends BaseActivity {
@@ -39,13 +39,13 @@ public class ApplicationActivity extends BaseActivity {
         setContentView(R.layout.activity_application);
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setSubtitle(YouTubeInfo.getChannelTitle());
+        actionBar.setSubtitle(YouTubeChannel.getChannelTitle());
         actionBar.setDisplayOptions(actionBar.getDisplayOptions() | ActionBar.DISPLAY_SHOW_CUSTOM);
         ImageView imageView = new ImageView(actionBar.getThemedContext());
         imageView.setScaleType(ImageView.ScaleType.CENTER);
 //        imageView.setImageResource(R.drawable.user);
         Glide.with(getBaseContext())
-            .load(YouTubeInfo.getChannelThumbnails())
+            .load(YouTubeChannel.getChannelThumbnailDefault())
             .apply(new RequestOptions().circleCrop().placeholder(R.drawable.user).error(R.drawable.user))
             .into(imageView);
         ActionBar.LayoutParams layoutParams = new ActionBar.LayoutParams(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT, Gravity.RIGHT | Gravity.CENTER_VERTICAL);
@@ -53,7 +53,7 @@ public class ApplicationActivity extends BaseActivity {
         imageView.setLayoutParams(layoutParams);
         actionBar.setCustomView(imageView);
 
-        showFragment(new YouTubePopulerFragment());
+        showFragment(new YouTubeChannelFragment());
 
         prepareTabDrawer();
     }

@@ -5,7 +5,7 @@ import com.channel.application.ApplicationActivity;
 import com.channel.application.youtube.config.YouTubeApi;
 import com.channel.application.youtube.config.YouTubeData;
 import com.channel.application.youtube.YouTube; 
-import com.channel.application.youtube.YoutubeTask;
+import com.channel.application.youtube.task.YouTubeChannelTask;
 import com.channel.application.youtube.YouTubeFolder;
 import com.channel.engine.widget.progress.MaterialProgressBar;
 
@@ -23,13 +23,15 @@ import android.widget.FrameLayout;
 
 import java.io.File;
 
-public class YoutubeTasksActivity extends AppCompatActivity 
+public class YouTubeTaskActivity extends AppCompatActivity 
 {
 
 	public static String ACTION_ADD_PLAYLIST = "addPlaylist";
 	public static String ADD_PLAYLIST = "playlistId";
-	
+    
+	private String channelID = YouTubeApi.YOUTUBE_CHANNEL_ID;
 	private String playlistID = YouTubeApi.YOUTUBE_BERANDA;
+    
 	public static FrameLayout serviceProgress;
 	
     @Override
@@ -48,7 +50,7 @@ public class YoutubeTasksActivity extends AppCompatActivity
         if (action != null && action.equals(ACTION_ADD_PLAYLIST))
 		{
 			String addPlaylistId = getIntent().getStringExtra(ADD_PLAYLIST);
-			YoutubeTask task = new YoutubeTask(this, addPlaylistId);
+			YouTubeChannelTask task = new YouTubeChannelTask(this, addPlaylistId);
             task.execute();               
 		}
 		else
@@ -57,15 +59,15 @@ public class YoutubeTasksActivity extends AppCompatActivity
 			if (file.exists())
 			{
 				serviceProgress.setVisibility(View.INVISIBLE);
-                ApplicationActivity.start(YoutubeTasksActivity.this);
-                YoutubeTasksActivity.this.finish();
-                YouTube mYoutube = new YouTube(YoutubeTasksActivity.this);
+                ApplicationActivity.start(YouTubeTaskActivity.this);
+                YouTubeTaskActivity.this.finish();
+                YouTube mYoutube = new YouTube(YouTubeTaskActivity.this);
                 mYoutube.sendShortMessage("YT Channel Is Ready");
 				mYoutube.setVibrator(2000);
 			}
 			else
 		    {			
-			    YoutubeTask task = new YoutubeTask(this, playlistID);
+			    YouTubeChannelTask task = new YouTubeChannelTask(this, channelID);
                 task.execute(); 
 			}
 		}

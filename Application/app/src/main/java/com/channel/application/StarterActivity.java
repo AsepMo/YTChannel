@@ -31,7 +31,7 @@ public class StarterActivity extends AppCompatActivity {
         public void run()
         {
             YouTube mYoutube = new YouTube(StarterActivity.this);
-            mYoutube.startActivity(StarterActivity.this, YoutubeTasksActivity.class);
+            mYoutube.startActivity(StarterActivity.this, YouTubeTaskActivity.class);
             //mYoutube.setVibrator(2000);
             StarterActivity.this.finish(); 
 
